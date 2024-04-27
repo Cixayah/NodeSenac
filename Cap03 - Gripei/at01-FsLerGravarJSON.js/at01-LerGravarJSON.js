@@ -4,11 +4,11 @@ const rwJSON = require('./fsJSON')
 //Dados a serem gravados
 let arquivo = './alunos.json'
 let obj = {
-    nome: 'Alice',
-    nota1:5,
-    nota2:6.5,
-    nota3:8,
-    nota4:4.5
+    nome: 'Joana',
+    nota1: 0,
+    nota2: 0.5,
+    nota3: 0,
+    nota4: 8.5
 }
 
 //Leitura e carga de um arquivo JSON
