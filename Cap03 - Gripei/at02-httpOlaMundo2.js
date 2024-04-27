@@ -17,6 +17,4 @@ const server = http.createServer((req, res) => {
 })
 
 //Ativa o servidor para escutar as requisições
-server.listen('3200', () => {
-    console.log('Servidor rodando http://localhost:3200')
-})
+
