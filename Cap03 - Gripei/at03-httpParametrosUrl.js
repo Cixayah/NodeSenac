@@ -22,4 +22,6 @@ const server = http.createServer((req, res) => {
         `)
     }
 })
-server.listen('3200', () => { console.log('Servidor rodando...') })
+server.listen('3200', () => {
+    console.log('Servidor rodando http://localhost:3200')
+})

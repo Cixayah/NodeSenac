@@ -8,4 +8,6 @@ const server = http.createServer((req, res) => {
     res.end(`Olá Node.js!!!`)
 })
 //Ativa o servidor para escutar as requisições
-server.listen('3200', () => { console.log('Servidor rodando...') })
+server.listen('3200', () => {
+    console.log('Servidor rodando http://localhost:3200')
+})
