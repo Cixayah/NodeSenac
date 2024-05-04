@@ -27,6 +27,10 @@ app.get('/registros', (req, res) => {
     }
 })
 
+app.post('/cadastrar/pets', (req, res) => {
+
+})
+
 app.listen(port, () => console.log
     (
         `Servidor rodando em: http://localhost:${port}`
