@@ -28,7 +28,13 @@ app.get('/registros', (req, res) => {
 })
 
 app.post('/cadastrar/pets', (req, res) => {
+    let {
+        name, especie, idadeAproximada, porteTamanho, corPredominante, corSecundaria
+    } = req.body
 
+    let dados = [
+        name, especie, parseFloat(idadeAproximada), porteTamanho, corPredominante, corSecundaria
+    ]
 })
 
 app.listen(port, () => console.log
