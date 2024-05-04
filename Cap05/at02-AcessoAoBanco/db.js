@@ -9,5 +9,5 @@ module.exports = () => {
         database: 'amigo_do_pet'
     });
     console.log('Funcionou')
-    return conn
+    return conn;
 }
