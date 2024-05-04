@@ -35,9 +35,22 @@ app.post('/cadastrar/pets', (req, res) => {
     let dados = [
         name, especie, parseFloat(idadeAproximada), porteTamanho, corPredominante, corSecundaria
     ]
-})
+    const sql = "INSERT INTO pets (nome, especie, idade_aproximada, porte, cor_predominante, cor_secundaria) VALUES (?,?,?,?,?,?);"
 
-app.listen(port, () => console.log
-    (
-        `Servidor rodando em: http://localhost:${port}`
-    ))
+    conn.query(sql, dados, (erro, resp) => {
+        let resposta
+        if (erro) resposta = {
+            ...erro, status: 400, message: `Os dados não foram gravados`
+        }
+        else resposta = {
+            ...resp, status: 200, message: `Sucesso: ${resp.affectedRows} linha(s) alterada(s)`
+        }
+        res.json(resposta).status(200)
+    })
+
+
+    app.listen(port, () => console.log
+        (
+            `Servidor rodando em: http://localhost:${port}`
+        ))
+})
