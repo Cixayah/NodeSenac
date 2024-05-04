@@ -29,11 +29,11 @@ app.get('/registros', (req, res) => {
 
 app.post('/cadastrar/pets', (req, res) => {
     let {
-        name, especie, idadeAproximada, porteTamanho, corPredominante, corSecundaria
+        nome, especie, idadeAproximada, porteTamanho, corPredominante, corSecundaria
     } = req.body
 
     let dados = [
-        name, especie, parseFloat(idadeAproximada), porteTamanho, corPredominante, corSecundaria
+        nome, especie, parseFloat(idadeAproximada), porteTamanho, corPredominante, corSecundaria
     ]
     const sql = "INSERT INTO pets (nome, especie, idade_aproximada, porte, cor_predominante, cor_secundaria) VALUES (?,?,?,?,?,?);"
 
