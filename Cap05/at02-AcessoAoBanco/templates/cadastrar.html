@@ -5,32 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Cadastrar Pets</title>
 </head>
 
-<body>
-    <h1>Cadastrar Pets</h1>
-    <form method="POST" action="/cadastrar/pets">
-        <div><label for="nome">Nome:</label>
-            <input type="text" name="nome" autofocus placeholder="Nome do pet..." />
-        </div>
-        <div><label for="especie">Especie:</label>
-            <input type="text" name="especie" autofocus placeholder="Ex.: cachorro" />
-        </div>
-        <div><label for="idadeAproximada">Idade Aproximada:</label>
-            <input type="number" name="idadeAproximada" placeholder="Ex: 2.5" />
-        </div>
-        <div> <label for="porteTamanho">Porte:</label>
-            <input type="text" name="porteTamanho" placeholder="Ex.: Pequeno" />
-        </div>
-        <div><label for="corPredominante">Cor Predominante:</label>
-            <input type="text" name="corPredominante" placeholder="Ex.: cinza" />
-        </div>
-        <div><label for="corSecundaria">Cor Secundaria:</label>
-            <input type="text" name="corSecundaria" placeholder="Ex.: preto" />
-        </div>
-        <div><input type="submit" value="Enviar" /></div>
-    </form>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-6">Cadastrar Pets</h1>
+        <form method="POST" action="/cadastrar/pets" class="max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="nome" class="block mb-1">Nome:</label>
+                <input type="text" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="nome" name="nome"
+                    autofocus placeholder="Nome do pet...">
+            </div>
+            <div class="mb-4">
+                <label for="especie" class="block mb-1">Espécie:</label>
+                <input type="text" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="especie"
+                    name="especie" placeholder="Ex.: cachorro">
+            </div>
+            <div class="mb-4">
+                <label for="idadeAproximada" class="block mb-1">Idade Aproximada:</label>
+                <input type="number" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="idadeAproximada"
+                    name="idadeAproximada" placeholder="Ex: 2.5">
+            </div>
+            <div class="mb-4">
+                <label for="porteTamanho" class="block mb-1">Porte:</label>
+                <input type="text" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="porteTamanho"
+                    name="porteTamanho" placeholder="Ex.: Pequeno">
+            </div>
+            <div class="mb-4">
+                <label for="corPredominante" class="block mb-1">Cor Predominante:</label>
+                <input type="text" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="corPredominante"
+                    name="corPredominante" placeholder="Ex.: cinza">
+            </div>
+            <div class="mb-4">
+                <label for="corSecundaria" class="block mb-1">Cor Secundária:</label>
+                <input type="text" class="w-full rounded-md bg-gray-800 text-white px-4 py-2" id="corSecundaria"
+                    name="corSecundaria" placeholder="Ex.: preto">
+            </div>
+            <button type="submit"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">Enviar</button>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Index</title>
 </head>
 
-<body>
-    <h1>Home</h1>
-    <nav>
-        <ul>
-            <li><a href="/cadastrar">Cadastrar</a></li>
-            <li><a href="/registros">Ver Registros</a></li>
-        </ul>
-    </nav>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-6">Home</h1>
+        <nav class="mb-6">
+            <ul class="flex space-x-4">
+                <li><a href="/cadastrar"
+                        class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">Cadastrar</a>
+                </li>
+                <li><a href="/registros"
+                        class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">Ver
+                        Registros</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 
 </html>
