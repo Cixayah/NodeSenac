@@ -1,12 +1,12 @@
 var app = require('express')()
 var porta = '3200'
-app.get('/',(req, res)=>{
+app.get('/', (req, res) => {
     //Acessa o Query Parameter na URL da requisição, caso exista
-    if (req.query['nome']){ 
-        let nome =req.query['nome']
+    if (req.query['nome']) {
+        let nome = req.query['nome']
         res.send(`<h1>Olá ${nome}, seja bem vindo!</h1>`)
     }
-    else{
+    else {
         res.send(`<h1>Informe seu nome</h1>
                   <form method="GET">
                     <label for="nome">Nome:</label>
@@ -15,4 +15,4 @@ app.get('/',(req, res)=>{
                    </form>`)
     }
 })
-app.listen(porta, ()=>console.log(`Servidor rodando em: http://localhost:${porta}`))
+app.listen(porta, () => console.log(`Servidor rodando em: http://localhost:${porta}`))
