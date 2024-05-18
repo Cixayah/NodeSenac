@@ -1,14 +1,13 @@
-const sequelize = require('./bdConexao');
-const Usuario = require('./models/usuario');
-const Pet = require('./models/pet');
-const Doacoes = require('./models/doacoes');
+const express = require('express')
+const app = express()
+const usuario = new require('./models/usuario')
+const pet = new require('./models/pet')
+const doacao = new require('./models/doacao')
+var porta = '3200'
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+app.get('/', (req, res)=>res.send('API - Amigo do Pet'))
 
-sequelize.sync()
-    .then(() => {
-        console.log('Database & tables created!');
-    })
-    .catch(err => {
-        console.error('Error creating database: ', err);
-    });
 
-module.exports = { Usuario, Pet, Doacoes };
+
+app.listen(porta, ()=>console.log(`Servidor rodando em: http://localhost:${porta}`))

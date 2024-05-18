@@ -35,7 +35,7 @@ module.exports = (app) => {
         }
     })
     usuarios.sync()
-    return usuarios
+    return usuario
 }
 
 //Relacionamentos
