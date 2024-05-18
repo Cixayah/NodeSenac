@@ -1,6 +1,6 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../bdConexao');
-
+const usuario = new require('./usuario');
 class Pet extends Model { }
 
 Pet.init({
@@ -44,5 +44,7 @@ Pet.init({
     sequelize,
     modelName: 'pets'
 });
-
+usuario.hasMany(Pet)
+Pet.belongsTo(usuario)
+sequelize.sync()
 module.exports = Pet;

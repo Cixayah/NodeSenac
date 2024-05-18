@@ -5,27 +5,27 @@ class Usuario extends Model { }
 
 Usuario.init({
   nome: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(50),
     allowNull: false
   },
   cpf: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(14),
     allowNull: false
   },
   telefone: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(11),
     allowNull: false
   },
   whatsapp: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(11),
     allowNull: false
   },
   email: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(50),
     allowNull: false
   },
   senha: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(50),
     allowNull: false
   }
 }, {
