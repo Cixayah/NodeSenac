@@ -12,7 +12,7 @@ Usuario.init({
   }
 }, {
   sequelize,
-  modelName: 'usuario'
+  modelName: 'usuarios'
 }
 )
 sequelize.sync()
