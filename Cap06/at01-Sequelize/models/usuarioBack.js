@@ -1,37 +1,37 @@
-const {Sequelize, Model, DataTypes} = require("sequelize")
+const { Sequelize, Model, DataTypes } = require("sequelize")
 const con = require("../bdConexao")
-module.exports = (app)=>{
+module.exports = (app) => {
     const usuarios = con.define('usuarios', {
-        id:{
+        id: {
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
             type: Sequelize.INTEGER
         },
-        nome:{
+        nome: {
             allowNull: false,
             type: Sequelize.TEXT,
-            defaultValue: null, 
+            defaultValue: null,
         },
-        email:{
+        email: {
             allowNull: false,
             type: Sequelize.TEXT,
-            defaultValue: null, 
+            defaultValue: null,
         },
-        cpf:{
+        cpf: {
             allowNull: false,
             type: Sequelize.TEXT,
-            defaultValue: null, 
+            defaultValue: null,
         },
-        telefone:{
+        telefone: {
             allowNull: false,
             type: Sequelize.TEXT,
-            defaultValue: null, 
+            defaultValue: null,
         },
-        whatsapp:{
+        whatsapp: {
             allowNull: false,
             type: Sequelize.TEXT,
-            defaultValue: null, 
+            defaultValue: null,
         }
     })
     usuarios.sync()
