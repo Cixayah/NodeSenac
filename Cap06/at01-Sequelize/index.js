@@ -9,7 +9,7 @@ app.use(express.json())
 app.get('/', (req, res) => res.send('API - Amigo do Pet'))
 
 app.get('/consultar/usuarios/:id?', async (req, res) => {
-    let dados = req.params.id ? await usuario.findOne({ where: { id: req.params.id } }) : await usuario.findAll()
+    let dados = req.params.id ? await usuario.findOne({ where: { id: req.params.id } }) : await usuario.findAll() //quando tem ? no url :id? é parâmetro opcional
     res.json(dados)
 })
 app.post('/cadastrar/usuarios', async (req, res) => {
