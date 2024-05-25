@@ -1,5 +1,5 @@
 const { where } = require("sequelize");
-
+const bcrypt = require('bcrypt')
 const model = new require('../../models/usuario');
 const rota = 'usuario';
 module.exports = (app) => {
