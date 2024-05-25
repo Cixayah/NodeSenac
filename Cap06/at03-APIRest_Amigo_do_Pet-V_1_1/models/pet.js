@@ -45,7 +45,7 @@ Pet.init({
   modelName: 'pet'
 }
 )
-usuario.hasMany(Pet) // Usuario tem muitos Pets 1-p-M
+usuario.hasMany(Pet) // Usuario tem muitos pet 1-p-M
 Pet.belongsTo(usuario) //Pet pertence a Usuario 1-p-1
 sequelize.sync()
 module.exports = Pet

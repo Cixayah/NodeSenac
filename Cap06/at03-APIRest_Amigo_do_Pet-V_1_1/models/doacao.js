@@ -23,7 +23,7 @@ Doacao.init({
 }
 )
 
-pet.hasMany(Doacao) //Muitos Pets tem muitas Doações - M-p-M
+pet.hasMany(Doacao) //Muitos pet tem muitas Doações - M-p-M
 Doacao.belongsTo(pet)
 
 usuario.hasMany(Doacao)
