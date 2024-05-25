@@ -8,6 +8,4 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.get('/', (req, res) => res.send('API - Amigo do Pet'))
 
-
-
 app.listen(porta, () => console.log(`Servidor rodando em: http://localhost:${porta}`))
