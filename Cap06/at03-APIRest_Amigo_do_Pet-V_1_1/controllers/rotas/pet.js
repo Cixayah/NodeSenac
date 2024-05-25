@@ -1,6 +1,6 @@
 const model = new require('../../models/pet')
 
-const rota = 'pets'
+const rota = 'pet'
 module.exports = (app) => {
     app.get(`/consultar/${rota}/:id?`, async (req, res) => {
         try {
