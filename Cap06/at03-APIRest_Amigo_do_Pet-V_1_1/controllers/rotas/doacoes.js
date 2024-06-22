@@ -1,5 +1,5 @@
-const model = new require('../../models/pet')
-const rota = 'pets'
+const model = new require('../../models/doacao')
+const rota = 'doacao'
 module.exports = (app)=> {
     app.get(`/${rota}/:id?`, async (req, res)=>{
         let dados = req.params.id? await model.findOne({where:{id:req.params.id}}) : await model.findAll()

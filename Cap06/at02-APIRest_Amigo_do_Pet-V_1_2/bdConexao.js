@@ -1,6 +1,6 @@
 const {Sequelize} = require('sequelize');
 const sequelize = new Sequelize(
-    'teste', 'root', 'senac', {
+    'amigo_do_pet2', 'nodejs', '1234', {
         host:'localhost',
         dialect:'mysql',
         charset: 'utf8',
@@ -14,3 +14,4 @@ try {
     console.log('Não foi possível conectar: ', erro )
 }
 module.exports = sequelize
+

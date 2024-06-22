@@ -2,7 +2,7 @@ const { DataTypes, Model } = require('sequelize')
 const sequelize = require('../bdConexao')
 class Usuario extends Model{}
 Usuario.init({
-      nome: {
+    nome: {
         type: DataTypes.STRING(50),
         allowNull: false
       },
@@ -11,11 +11,11 @@ Usuario.init({
         allowNull:false
       },
       telefone: {
-        type: DataTypes.STRING(11),
+        type: DataTypes.STRING(14),
         allowNull:true
       },
       whatsapp: {
-        type: DataTypes.STRING(11),
+        type: DataTypes.STRING(14),
         allowNull:true
       },
       email: {

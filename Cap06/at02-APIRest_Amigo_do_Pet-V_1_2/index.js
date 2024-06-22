@@ -1,14 +1,15 @@
 const express = require('express')
-const app = express()
 const consign=require('consign')
-const usuario = new require('./models/usuario')
-const pet = new require('./models/pet')
-const doacao = new require('./models/doacao')
+const app = express()
+const cors = require('cors')
+app.use(cors({
+    origin: '*', // Permite todas as origens
+    credentials: true // Se necessário para permitir o envio de cookies
+  }))
 var porta = '3200'
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.get('/', (req, res)=>res.send('API - Amigo do Pet'))
-
 consign()
     .include('./controllers/rotas')
     .into(app)

@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken')
-const bcrypt = require('bcryptjs')
-const jwtSecret ='klsdfjlsd34593DFLKGDFdfgdf6767fgfg56g'
+const bcrypt = require('bcrypt')
+const jwtSecret ='errtyytuczvxvdgghfrytddvfgfvzcvfehrew'
 const model = new require('../models/usuario')
-module.exports = {
+module.exports={
     criptografarSenha: async(senha)=>{
         const salt = bcrypt.genSaltSync(12)
         return bcrypt.hashSync(senha, salt)
@@ -12,6 +12,7 @@ module.exports = {
     
     //Compara o hash da senha enviada na requisição com o hash da senha do banco
     validarSenha: async(senha, hashSenha)=> await bcrypt.compare(senha, hashSenha),
+    
     validarToken:(req, res, next)=>{
         try {
             let token = req.headers.authorization
@@ -19,7 +20,7 @@ module.exports = {
             token = token[1]
             jwt.verify(token, jwtSecret, (erro, dados)=>{//Verifica a validade do token
             if (erro){
-                res.json({message:'Token inválido!', error:erro }).status(400)
+                res.json({message:'Token inválido!', error:erro }).status(401)
             } else {
                 req.token = token //Insere o token na requisição
                 req.usuarioAtual = {...dados} //Insere os dados do usuario atual na requisição
