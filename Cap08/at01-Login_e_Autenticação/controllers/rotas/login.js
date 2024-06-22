@@ -18,7 +18,6 @@ module.exports = (app) => {
     })
     app.get('/logoff', async (req, res) => {
         try {
-            console.log('/logoff')
             requests.excluirCookie(res)
             res.render('index')
         } catch (error) {
