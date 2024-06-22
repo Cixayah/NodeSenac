@@ -6,7 +6,7 @@ app.use(cors({
     origin: '*', // Permite todas as origens
     credentials: true // Se necessário para permitir o envio de cookies
   }))
-var porta = '3200'
+var porta = '3203'
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.get('/', (req, res)=>res.send('API - Amigo do Pet'))
